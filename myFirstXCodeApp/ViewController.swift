@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    //keeps track of number of times button pressed
     @IBAction func buttonPressed(_ sender: Any) {
         countPress = countPress + 1
         if countPress >= 5 {
