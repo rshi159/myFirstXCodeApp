@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tf1: UITextField!
+    @IBOutlet weak var tf2: UITextField!
+    var sum = 0.0
     var countPress = 0
     @IBOutlet weak var myLabel: UILabel!
     override func viewDidLoad() {
@@ -17,11 +21,8 @@ class ViewController: UIViewController {
     }
     //keeps track of number of times button pressed
     @IBAction func buttonPressed(_ sender: Any) {
-        countPress = countPress + 1
-        if countPress >= 5 {
-            view.backgroundColor = UIColor.red
-            myLabel.text = "im cool"
-        }
+        sum = Double(tf1.text!)! + Double(tf2.text!)!
+        myLabel.text = String(sum)
     }
     
     override func didReceiveMemoryWarning() {
